@@ -18,7 +18,7 @@ class _HomeState extends State<Home> {
 
 
     String bgImage = data['isDaytime'] ? 'day.jpg' : 'night.jpg';
-    Color bgColor = data['isDaytime'] ? Colors.cyan[700] : Colors.indigo[700];
+    Color bgColor = data['isDaytime'] ? Colors.cyan[700] : Colors.teal[900];
 
     return Scaffold(
       backgroundColor: bgColor,
@@ -46,18 +46,24 @@ class _HomeState extends State<Home> {
                      };
                    });
                   },
-                  icon: Icon(
+                  icon: Column(
+                    children: [
+                      Icon(
 
-                    Icons.edit_location,
-                    color: Colors.grey[300],
+                        Icons.edit_location,
+                        color: Colors.grey[300],
+                        size: 50,
+
+                      ),
+                    ],
                   ),
-                  label: Text(
-                    'Edit Location',
-                    style: TextStyle(
-                      color: Colors.grey[300],
+                  label: Text('',
                     ),
                   ),
-                ),
+                Text('Choose Location',
+                style: TextStyle(
+                  color: Colors.white,
+                ),),
                 SizedBox(height: 20.0),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
